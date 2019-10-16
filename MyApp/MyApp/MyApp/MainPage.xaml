@@ -5,12 +5,52 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="MyApp.MainPage">
-
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label HorizontalOptions="Center" Text="ВТБ - ИНДЕКС МОСБИРЖИ"/>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="Стартовая сумма"/>
+            <Label Text="{Binding StartSum}"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="Начальная дата"/>
+            <Label Text="{Binding StartDate}"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="Цена покупки пая"/>
+            <Label Text="{Binding StartPriceShare}"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label Text="Количество паев"/>
+            <Label Text="{Binding GetCountShares}"/>
+        </StackLayout>
+        <BoxView HeightRequest="1" Color="Black" Margin="10"/>
+        <StackLayout  Orientation="Horizontal">
+            <Label Text="Дата цены пая"/>
+            <Label Text="{Binding CurrentDate, Mode=TwoWay}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Текущая цена пая на"/>
+            <Label Text="{Binding GetCurrentSharePrice, Mode=TwoWay}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Изменение в %"/>
+            <Label Text="{Binding GetProcent, Mode=TwoWay}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Текущий капитал"/>
+            <Label Text="{Binding GetCurrentCapital, Mode=TwoWay}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Заработано"/>
+            <Label Text="{Binding EarningSum, Mode=TwoWay}"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

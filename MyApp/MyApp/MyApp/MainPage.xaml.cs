@@ -1,8 +1,11 @@
-﻿using System;
+﻿using InvestingCalcLibrary;
+using MyApp.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -16,6 +19,9 @@ namespace MyApp
         public MainPage()
         {
             InitializeComponent();
+
+            this.BindingContext = new MainViewModel();
+
         }
     }
 }
